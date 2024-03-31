@@ -109,7 +109,7 @@ class WaterfallChart:
             height=df_plot[self.delta_col],
             bottom=df_plot[self.base_col],
             color=barcolors,
-            **bar_kwargs
+            **bar_kwargs,
         )
         return ax
 
@@ -147,7 +147,7 @@ class WaterfallChart:
             if label_type == "list":
                 label = str(bar_labels[i])
             elif label_type == "value":
-                label = "{:,}".format(int(df_plot[self.delta_col][i]))
+                label = f"{df_plot.reset_index().loc[i, self.delta_col]}"
             else:
                 label = bar_labels
             ax.text(
