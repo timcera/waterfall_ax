@@ -4,7 +4,7 @@ with open("waterfall_ax/README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="waterfall_ax", 
+    name="waterfall_ax",
     version="1.0.0",
     author="Yaran Fan",
     author_email="yarfan.fan@gmail.com",
@@ -18,5 +18,5 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires='>=3.6',
+    python_requires=">=3.6",
 )
